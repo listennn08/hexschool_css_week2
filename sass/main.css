@@ -331,6 +331,12 @@ body {
   display: block;
 }
 
+.icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .list li {
   line-height: 42px;
 }
