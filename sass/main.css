@@ -85,7 +85,8 @@ body {
   font-style: italic;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 356px 0 268px;
+  padding: 384px 0 268px;
+  font-weight: 900;
 }
 
 .fz-1 {
