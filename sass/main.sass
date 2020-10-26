@@ -61,7 +61,7 @@ body
 
 .header
   height: 100vh
-  background-image: url('https://github.com/hexschool/webLayoutTraining1st/blob/master/week2/banner.png?raw=true')
+  background: url('https://github.com/hexschool/webLayoutTraining1st/blob/master/week2/banner.png?raw=true') no-repeat center center/ cover
   color: #FFFFFF
   display: flex
   flex-direction: column
@@ -108,6 +108,9 @@ $marginTypes: mb, mt, mx, 'mr'
     @else if $type == mr
       .#{$type}-#{$i}
         margin-right: #{$i * 8}px
+.mx-auto
+  margin-left: auto
+  margin-right: auto
 .photo
   display: block
 .icons
@@ -117,22 +120,47 @@ $marginTypes: mb, mt, mx, 'mr'
 .list
   li
     line-height: 42px
+
 .img-list
   display: flex
   flex-wrap: wrap
   align-items: center
-  justify-content: space-around
+  li
+    img
+      transition: .2s
+      &:hover
+        box-shadow: .5rem .5rem 1rem #888
+      &:hover + p
+        text-shadow: .5rem .5rem .5rem #888
+    a
+      p
+        color: #000
 
+.around
+  justify-content: space-around
+.between
+  justify-content: space-between
+
+
+.about, .content
+  width: 1200px
+  margin: 0 auto
 .about
-  padding: 64px 754px 56px
+  padding: 64px 0 56px
 .content
-  padding: 64px 360px 160px
+  padding: 64px 0 160px
 .footer
-  padding: 64px 802px 80px
+  padding: 64px 0 80px
+  a
+    &:hover
+      color: #aaa
+      text-decoration: underline
 .ft-italic
   font-style: italic
 
 .circle
+  width: 384px
+  margin: 0 auto
   border-top: 1px solid #000
   display: flex
   flex-direction: column
@@ -147,12 +175,10 @@ $marginTypes: mb, mt, mx, 'mr'
       width: 22px
       height: 22px
       position: absolute
-      top: 8px
+      top: 50%
+      transform: translateY(-50%)
       left: -16px
       background-color:#891818
       border-radius: 50%
 a
   transition: .2s
-  &:hover
-    color: #aaa
-    text-decoration: underline

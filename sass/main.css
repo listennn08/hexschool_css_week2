@@ -67,7 +67,7 @@ body {
 
 .header {
   height: 100vh;
-  background-image: url("https://github.com/hexschool/webLayoutTraining1st/blob/master/week2/banner.png?raw=true");
+  background: url("https://github.com/hexschool/webLayoutTraining1st/blob/master/week2/banner.png?raw=true") no-repeat center center/cover;
   color: #FFFFFF;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -324,6 +324,11 @@ body {
   margin-right: 80px;
 }
 
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .photo {
   display: block;
 }
@@ -345,20 +350,57 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.img-list li img {
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.img-list li img:hover {
+  -webkit-box-shadow: .5rem .5rem 1rem #888;
+          box-shadow: .5rem .5rem 1rem #888;
+}
+
+.img-list li img:hover + p {
+  text-shadow: .5rem .5rem .5rem #888;
+}
+
+.img-list li a p {
+  color: #000;
+}
+
+.around {
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
 
+.between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.about, .content {
+  width: 1200px;
+  margin: 0 auto;
+}
+
 .about {
-  padding: 64px 754px 56px;
+  padding: 64px 0 56px;
 }
 
 .content {
-  padding: 64px 360px 160px;
+  padding: 64px 0 160px;
 }
 
 .footer {
-  padding: 64px 802px 80px;
+  padding: 64px 0 80px;
+}
+
+.footer a:hover {
+  color: #aaa;
+  text-decoration: underline;
 }
 
 .ft-italic {
@@ -366,6 +408,8 @@ body {
 }
 
 .circle {
+  width: 384px;
+  margin: 0 auto;
   border-top: 1px solid #000;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -391,7 +435,9 @@ body {
   width: 22px;
   height: 22px;
   position: absolute;
-  top: 8px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   left: -16px;
   background-color: #891818;
   border-radius: 50%;
@@ -400,10 +446,5 @@ body {
 a {
   -webkit-transition: .2s;
   transition: .2s;
-}
-
-a:hover {
-  color: #aaa;
-  text-decoration: underline;
 }
 /*# sourceMappingURL=main.css.map */
