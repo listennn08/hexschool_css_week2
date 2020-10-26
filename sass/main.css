@@ -352,21 +352,21 @@ body {
           align-items: center;
 }
 
-.img-list li img {
+.work .img-list img {
   -webkit-transition: .2s;
   transition: .2s;
 }
 
-.img-list li img:hover {
+.work .img-list img:hover {
   -webkit-box-shadow: .5rem .5rem 1rem #888;
           box-shadow: .5rem .5rem 1rem #888;
 }
 
-.img-list li img:hover + p {
+.work .img-list img:hover + p {
   text-shadow: .5rem .5rem .5rem #888;
 }
 
-.img-list li a p {
+.work .img-list a p {
   color: #000;
 }
 
