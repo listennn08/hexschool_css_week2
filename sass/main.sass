@@ -49,14 +49,12 @@ table
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,500;1,700&display=swap')
 
-*
+*, *::before, *::after
   text-decoration: none
+  box-sizing: border-box
 
 body
   overflow-x: hidden
-
-.container
-  width: 100vw
   font-family: 'Roboto', sans serif
 
 .header
@@ -68,7 +66,6 @@ body
   align-items: center
   justify-content: center
   font-style: italic
-  box-sizing: border-box
   padding: 384px 0 268px
   font-weight: 900
   
@@ -86,7 +83,7 @@ body
 .text-center
   text-align: center
 
-.bg-black
+.bg-dark
   color: #ffffff
   background-color: #000
 .color-white
@@ -114,8 +111,8 @@ $marginTypes: mb, mt, mx, 'mr'
 .photo
   display: block
 .icons
-  li
-    display: inline
+  display: flex
+
 
 .list
   li
@@ -124,7 +121,6 @@ $marginTypes: mb, mt, mx, 'mr'
 .img-list
   display: flex
   flex-wrap: wrap
-  align-items: center
 .work
   .img-list
     img
@@ -143,12 +139,12 @@ $marginTypes: mb, mt, mx, 'mr'
   justify-content: space-between
 
 
-.about, .content
+.container
   width: 1200px
   margin: 0 auto
 .about
   padding: 64px 0 56px
-.content
+.container
   padding: 64px 0 160px
 .footer
   padding: 64px 0 80px
